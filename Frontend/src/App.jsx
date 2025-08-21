@@ -5,6 +5,8 @@ import ErrorPage from './pages/ErrorPage';
 import UserRegister from './pages/UserRegister';
 import UserLogin from './pages/UserLogin';
 import Dashboard from './pages/Dashboard';
+import Task from './pages/Task';
+import Edittask from './pages/Edittask';
 
 function App() {
   return (
@@ -25,6 +27,14 @@ function App() {
         <Route
           path="/dashboard"
           element={<Dashboard />}
+        />
+        <Route
+          path="/task"
+          element={<Task />}
+        />
+        <Route
+          path="/edit-task/:id"
+          element={<Edittask />}
         />
         <Route
           path="*"

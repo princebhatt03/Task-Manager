@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, LogOut } from 'lucide-react';
+import { Menu, X, LogOut, User } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 
@@ -20,16 +20,9 @@ const Header = () => {
   // Handle Logout
   const handleLogout = () => {
     try {
-      // Remove user info from localStorage
       localStorage.removeItem('taskUser');
-
-      // Reset user state in frontend
       setUser(null);
-
-      // Show success toast
       toast.success('Logged out successfully!');
-
-      // Redirect to login page
       navigate('/user-login');
     } catch (error) {
       console.error('Logout Error:', error);
@@ -49,17 +42,23 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden cursor-pointer md:flex items-center space-x-4">
             {user ? (
               <>
-                <span className="text-gray-700 font-medium">{user.name}</span>
+                <div className="flex items-center space-x-2">
+                  <User
+                    className="text-gray-700"
+                    size={18}
+                  />
+                  <span className="text-gray-700 font-medium">{user.name}</span>
+                </div>
                 <button
                   onClick={handleLogout}
-                  className="flex items-center bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 transition">
+                  className="flex cursor-pointer items-center bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 transition">
                   <LogOut
                     size={16}
                     className="mr-1"
-                  />{' '}
+                  />
                   Logout
                 </button>
               </>
@@ -89,16 +88,22 @@ const Header = () => {
           <div className="px-4 pt-2 pb-4 space-y-2">
             {user ? (
               <>
-                <span className="block text-gray-700 font-medium">
-                  {user.name}
-                </span>
+                <div className="flex items-center space-x-2">
+                  <User
+                    className="text-gray-700"
+                    size={18}
+                  />
+                  <span className="block text-gray-700 font-medium">
+                    {user.name}
+                  </span>
+                </div>
                 <button
                   onClick={handleLogout}
                   className="flex items-center w-full justify-center bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">
                   <LogOut
                     size={16}
                     className="mr-1"
-                  />{' '}
+                  />
                   Logout
                 </button>
               </>

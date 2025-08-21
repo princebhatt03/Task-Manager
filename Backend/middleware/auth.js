@@ -3,25 +3,18 @@ const User = require('../models/user.model');
 
 module.exports = async function auth(req, res, next) {
   try {
-    // Get token from Authorization header
     const authHeader = req.headers['authorization'] || '';
-    const token = authHeader.startsWith('Bearer ')
-      ? authHeader.slice(7) // remove "Bearer "
-      : null;
+    const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
 
     if (!token) {
       return res.status(401).json({
         error: { message: 'Missing Authorization token', code: 'UNAUTHORIZED' },
       });
     }
-
-    // Verify token
     const payload = jwt.verify(
       token,
       process.env.JWT_SECRET || 'default_secret'
     );
-
-    // Attach user object to request
     const user = await User.findById(payload.id).select('-password');
     if (!user) {
       return res.status(401).json({

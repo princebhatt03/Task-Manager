@@ -1,4 +1,3 @@
-// routes/task.routes.js
 const express = require('express');
 const { Task, PRIORITIES, STATUSES } = require('../models/task.model');
 const auth = require('../middleware/auth');
