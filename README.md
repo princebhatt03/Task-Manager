@@ -143,7 +143,6 @@ Prince Bhatt
 --- 
 📄 License
 
-This project is licensed under the MIT License - see the LICENSE
- file for details.
+This project is created as a Task for Job Interview
  
 ✨Thank you for connecting...
