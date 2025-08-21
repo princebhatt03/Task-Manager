@@ -68,7 +68,7 @@ VITE_BACKEND_URL=http://localhost:3000
 ### 1️⃣ Clone the repository
 ```bash
 git clone REPOSITORY_LINK
-cd task-manager
+cd APP_NAME
 ```
 ### 2️⃣ Backend Setup
 ```
