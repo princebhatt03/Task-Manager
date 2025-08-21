@@ -51,40 +51,39 @@ A full-stack **Task Management Web Application** built with **MERN stack** (Mong
 
 ## 🔑 Environment Variables
 
-### Backend `.env`
-PORT=5000
-MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
-JWT_SECRET=YOUR_SECRET_KEY
-
-
-### Frontend `.env`
-VITE_API_URL=YOUR_BACKEND_URL
-
-
----
-
+### 🔒 Backend: `backend/.env`
+```env
+PORT=3000
+DB_CONNECT=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+FRONTEND_URL=your_frontend_URL
+```
+### 🎯 Frontend: `frontend/.env`
+```env
+VITE_BACKEND_URL=http://localhost:3000
+```
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone YOUR_REPOSITORY_LINK
+git clone REPOSITORY_LINK
 cd task-manager
 ```
-2️⃣ Backend Setup
+### 2️⃣ Backend Setup
 ```
 cd backend
 npm install
 npm run dev
 Backend will run on http://localhost:5000 (or your configured PORT).
 ```
-3️⃣ Frontend Setup
+### 3️⃣ Frontend Setup
 ```
 cd frontend
 npm install
 npm run dev
 Frontend will run on http://localhost:5173 (or your Vite configured port).
 ```
-📂 Project Structure
+### 📂 Project Structure
 ```
 task-manager/
 │
@@ -115,7 +114,8 @@ task-manager/
 │
 └─ README.md
 ```
-⚙️ API Endpoints
+### ⚙️ API Endpoints
+```
 | Method | Endpoint                | Description                      |
 | ------ | ----------------------- | -------------------------------- |
 | POST   | `/api/users/register`   | Register a new user              |
@@ -125,30 +125,22 @@ task-manager/
 | PATCH  | `/api/tasks/:id`        | Update a task                    |
 | PATCH  | `/api/tasks/:id/toggle` | Toggle task status               |
 | DELETE | `/api/tasks/:id`        | Delete a task                    |
+```
 
-🧑‍💻 Developer
+### 🧑‍💻 Developer
 
 Prince Bhatt
+---
+📧 Email: princebhatt316@gmail.com
 
-LinkedIn: 
+🌐 Portfolio: [Prince Bhatt](https://princebhatt03.github.io/Portfolio)
 
-GitHub: Your GitHub URL
+💼 GitHub: [princebhatt03](https://github.com/princebhatt03)
 
-Portfolio: Your Portfolio URL
-
-Email: your.email@example.com
-
+💬 LinkedIn: [Prince Bhatt](https://www.linkedin.com/in/prince-bhatt-0958a725a/)
+--- 
 📄 License
 
 This project is licensed under the MIT License - see the LICENSE
  file for details.
-
-✨ Acknowledgements
-
-Inspired by real-world task management applications
-
-Built as part of a Job Interview Task Project
-
-Tailwind CSS & Framer Motion for modern responsive design
-
-React Hot Toast for notifications
+✨Thank you for connecting...
