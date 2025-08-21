@@ -1,0 +1,48 @@
+Problem Statement: 
+Full Stack Developer Assignment
+
+Objective:
+Build a full-stack web application with both frontend and backend functionality, deployed using Render (for backend) and Netlify (for frontend).
+
+Task Overview:
+Create a Task Management System where users can:
+- Register and log in
+- Add, update, and delete tasks
+- Mark tasks as completed
+- View a list of tasks with filters (All, Completed, Pending)
+
+Frontend Requirements (React.js):
+- Register/Login form (with validation)
+- Dashboard to display tasks
+- Add Task form (title, description, due date, priority)
+- Edit Task functionality
+- Delete Task functionality
+- Mark as Completed
+- Responsive design with basic styling
+
+Backend Requirements (Node.js + Express + MongoDB):
+- User authentication (JWT based)
+- REST APIs for task operations (CRUD)
+- MongoDB schema for User and Task
+- Proper error handling and response messages
+
+Deployment:
+- Deploy backend on Render
+- Deploy frontend on Netlify
+- Share both live URLs
+
+Submission Checklist:
+- ✅ GitHub repo link with clear README
+- ✅ Live links of both frontend (Netlify) and backend (Render)
+- ✅ Valid login credentials to test the app
+- ✅ Screenshot or screen recording of working app
+- ✅ Submission deadline: 4th August
+
+Bonus:
+- Add search functionality
+- Add pagination
+- Add filters (priority, due date, status)
+
+Note:
+- Focus on clean code, project structure, and UI/UX
+- Incomplete or non-functional apps will not be considered
