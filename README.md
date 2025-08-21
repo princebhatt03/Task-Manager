@@ -31,7 +31,7 @@ A full-stack **Task Management Web Application** built with **MERN stack** (Mong
 - VS Code  
 - Postman (for testing API)  
 - Render (for backend hosting)
-- Netlify (for Hosting Purpose)
+- Netlify (for frontend hosting)
 - MongoDB ATLAS (for Database Hosting)
 
 ---
