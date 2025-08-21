@@ -1,14 +1,12 @@
 # Task Manager Web Application
-
-![Task Manager Banner](https://via.placeholder.com/1200x400?text=Task+Manager)  
-
+This project has been developed as part of a **job interview task at Jai Japnaam Technology**. It demonstrates the ability to build a full-stack web application using the MERN stack, including features such as user authentication, task management with CRUD operations, priority-based task categorization, and a responsive, animated frontend design. The application showcases practical skills in React, Node.js, Express, MongoDB, Tailwind CSS, and modern development workflows.
 A full-stack **Task Management Web Application** built with **MERN stack** (MongoDB, Express.js, React, Node.js). This project allows users to **create, update, delete, and manage tasks** with priorities, due dates, and status tracking.  
 
 ---
 
 ## 🌐 Live Demo
 
-[View Live on Netlify](YOUR_FRONTEND_NETLIFY_LINK_HERE)
+[View Live on Netlify](https://task-manager-job-task.netlify.app)
 
 ---
 
@@ -16,7 +14,7 @@ A full-stack **Task Management Web Application** built with **MERN stack** (Mong
 
 **Frontend:**  
 - React.js  
-- Tailwind CSS  
+- Tailwind CSS
 - Framer Motion (for animations)  
 - React Hot Toast (for notifications)  
 - Axios (for API requests)  
@@ -31,7 +29,8 @@ A full-stack **Task Management Web Application** built with **MERN stack** (Mong
 **Other Tools:**  
 - VS Code  
 - Postman (for testing API)  
-- Render (for backend hosting)  
+- Render (for backend hosting)
+- Netlify (For Hosting Purpose)
 
 ---
 
@@ -138,6 +137,7 @@ Prince Bhatt
 💼 GitHub: [princebhatt03](https://github.com/princebhatt03)
 
 💬 LinkedIn: [Prince Bhatt](https://www.linkedin.com/in/prince-bhatt-0958a725a/)
+
 --- 
 📄 License
 
