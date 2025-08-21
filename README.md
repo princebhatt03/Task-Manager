@@ -15,6 +15,7 @@ A full-stack **Task Management Web Application** built with **MERN stack** (Mong
 **Frontend:**  
 - React.js  
 - Tailwind CSS
+- Vite App (for build tool)
 - Framer Motion (for animations)  
 - React Hot Toast (for notifications)  
 - Axios (for API requests)  
@@ -22,7 +23,7 @@ A full-stack **Task Management Web Application** built with **MERN stack** (Mong
 **Backend:**  
 - Node.js  
 - Express.js  
-- MongoDB (Atlas)  
+- MongoDB 
 - Mongoose  
 - JWT Authentication  
 
@@ -30,7 +31,8 @@ A full-stack **Task Management Web Application** built with **MERN stack** (Mong
 - VS Code  
 - Postman (for testing API)  
 - Render (for backend hosting)
-- Netlify (For Hosting Purpose)
+- Netlify (for Hosting Purpose)
+- MongoDB ATLAS (for Database Hosting)
 
 ---
 
