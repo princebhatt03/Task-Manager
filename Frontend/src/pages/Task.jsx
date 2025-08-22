@@ -181,14 +181,7 @@ const Task = () => {
               disabled={loading}
               onClick={() => navigate('/dashboard')}
               className="w-full flex items-center justify-center bg-indigo-800 text-white py-2 px-4 rounded-xl hover:bg-indigo-900 transition disabled:opacity-50">
-              {loading ? (
-                <Loader2
-                  className="animate-spin mr-2"
-                  size={20}
-                />
-              ) : (
-                'Back to Dashboard'
-              )}
+              Back to Dashboard
             </motion.button>
           </form>
         </motion.div>

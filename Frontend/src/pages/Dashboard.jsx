@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Trash2, Edit2, CheckCircle } from 'lucide-react';
+import { Trash2, Edit2, CheckCircle, Home } from 'lucide-react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast, Toaster } from 'react-hot-toast';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import AddTaskButton from '../components/Button';
-import { Home } from 'lucide-react';
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -16,6 +15,12 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(null);
   const [confirmToggle, setConfirmToggle] = useState(null);
+
+  const [filters, setFilters] = useState({
+    priority: '',
+    status: '',
+    dueDate: '',
+  });
 
   if (!user) {
     navigate('/user-login');
@@ -100,6 +105,23 @@ const Dashboard = () => {
     }
   };
 
+  // Handle filter change
+  const handleFilterChange = e => {
+    setFilters({ ...filters, [e.target.name]: e.target.value });
+  };
+
+  // Filtered tasks
+  const filteredTasks = tasks.filter(task => {
+    return (
+      (filters.priority ? task.priority === filters.priority : true) &&
+      (filters.status ? task.status === filters.status : true) &&
+      (filters.dueDate
+        ? new Date(task.dueDate).toLocaleDateString() ===
+          new Date(filters.dueDate).toLocaleDateString()
+        : true)
+    );
+  });
+
   return (
     <>
       <Toaster
@@ -113,9 +135,49 @@ const Dashboard = () => {
             Task Dashboard
           </h2>
 
+          {/* Filters */}
+          <div className="flex flex-col md:flex-row gap-4 mb-4 justify-center items-center">
+            <select
+              name="priority"
+              value={filters.priority}
+              onChange={handleFilterChange}
+              className="px-4 py-2 border rounded-xl focus:ring-2 focus:ring-indigo-500">
+              <option value="">All Priorities</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+
+            <select
+              name="status"
+              value={filters.status}
+              onChange={handleFilterChange}
+              className="px-4 py-2 border rounded-xl focus:ring-2 focus:ring-indigo-500">
+              <option value="">All Status</option>
+              <option value="completed">Completed</option>
+              <option value="pending">Pending</option>
+            </select>
+
+            <input
+              type="date"
+              name="dueDate"
+              value={filters.dueDate}
+              onChange={handleFilterChange}
+              className="px-4 py-2 border rounded-xl focus:ring-2 focus:ring-indigo-500"
+            />
+
+            <button
+              onClick={() =>
+                setFilters({ priority: '', status: '', dueDate: '' })
+              }
+              className="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded-xl transition">
+              Reset Filters
+            </button>
+          </div>
+
           {loading ? (
             <div className="text-center text-gray-500">Loading tasks...</div>
-          ) : tasks.length === 0 ? (
+          ) : filteredTasks.length === 0 ? (
             <div className="text-center text-gray-500">No tasks found</div>
           ) : (
             <div className="overflow-x-auto">
@@ -132,7 +194,7 @@ const Dashboard = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {tasks.map((task, index) => (
+                  {filteredTasks.map((task, index) => (
                     <tr
                       key={task._id}
                       className={`border-t border-gray-200 ${
@@ -198,6 +260,8 @@ const Dashboard = () => {
             </div>
           )}
         </div>
+
+        {/* Add Task & Go Home Buttons */}
         <div className="flex justify-center mt-2 mb-4">
           <AddTaskButton />
         </div>
