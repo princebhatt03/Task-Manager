@@ -129,7 +129,10 @@ task-manager/
 ```
 ### Screenshots of Page
 
+1️⃣
 <img width="1357" height="628" alt="s1" src="https://github.com/user-attachments/assets/af176dd3-1190-4d27-9abc-2aaa602ccdfe" />
+
+2️⃣
 <img width="1349" height="637" alt="s2" src="https://github.com/user-attachments/assets/28cb570e-8d34-4f33-9ef2-939748f7813b" />
 
 ### Screen Recording
