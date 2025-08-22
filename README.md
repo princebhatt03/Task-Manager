@@ -31,7 +31,7 @@ A full-stack **Task Management Web Application** built with **MERN stack** (Mong
 - VS Code  
 - Postman (for testing API)  
 - Render (for backend hosting)
-- Netlify (for Hosting Purpose)
+- Netlify (for frontend hosting)
 - MongoDB ATLAS (for Database Hosting)
 
 ---
@@ -68,7 +68,7 @@ VITE_BACKEND_URL=http://localhost:3000
 ### 1️⃣ Clone the repository
 ```bash
 git clone REPOSITORY_LINK
-cd task-manager
+cd APP_NAME
 ```
 ### 2️⃣ Backend Setup
 ```
@@ -143,7 +143,6 @@ Prince Bhatt
 --- 
 📄 License
 
-This project is licensed under the MIT License - see the LICENSE
- file for details.
+This project is created as a Task for Job Interview
  
 ✨Thank you for connecting...
