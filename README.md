@@ -57,11 +57,11 @@ A full-stack **Task Management Web Application** built with **MERN stack** (Mong
 PORT=3000
 DB_CONNECT=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
-FRONTEND_URL=your_frontend_URL
+FRONTEND_URL=your_frontend_url
 ```
 ### 🎯 Frontend: `frontend/.env`
 ```env
-VITE_BACKEND_URL=http://localhost:3000
+VITE_BACKEND_URL=your_backend_url
 ```
 ## 🚀 Getting Started
 
@@ -74,7 +74,7 @@ cd APP_NAME
 ```
 cd backend
 npm install
-npm run dev
+nodemon or npx nodemon
 Backend will run on http://localhost:5000 (or your configured PORT).
 ```
 ### 3️⃣ Frontend Setup
