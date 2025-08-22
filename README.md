@@ -127,6 +127,14 @@ task-manager/
 | PATCH  | `/api/tasks/:id/toggle` | Toggle task status               |
 | DELETE | `/api/tasks/:id`        | Delete a task                    |
 ```
+### Screenshots of Page
+
+<img width="1357" height="628" alt="s1" src="https://github.com/user-attachments/assets/af176dd3-1190-4d27-9abc-2aaa602ccdfe" />
+<img width="1349" height="637" alt="s2" src="https://github.com/user-attachments/assets/28cb570e-8d34-4f33-9ef2-939748f7813b" />
+
+### Screen Recording
+
+https://github.com/user-attachments/assets/6ebdb530-c462-490d-bfc8-314d5c42b899
 
 ### 🧑‍💻 Developer
 
